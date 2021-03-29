@@ -10,6 +10,11 @@
             <div class="swiper-button-next swiper-button-white" slot="button-next"></div>
             <div class="swiper-button-prev swiper-button-white" slot="button-prev"></div>
         </swiper>
+
+        <div class="overlay" style="width: 100%">
+            <slot>
+            </slot>
+        </div>
     </div>
 </template>
 
@@ -28,6 +33,10 @@
             return {
                 swiperOptionTop: {
                     loop: true,
+                    autoplay: {
+                        delay: 5000,
+                        stopOnLastSlide: false,
+                    },
                     loopedSlides: 5, // looped slides should be the same
                     spaceBetween: 10,
                     navigation: {
@@ -44,6 +53,14 @@
 
     .swiper-cont{
         width: 100%;
+        position: relative;
+    }
+
+    .overlay{
+        position: absolute;
+        pointer-events: none;
+        top: 0;
+        z-index: 1;
     }
 
     .swiper {
@@ -60,7 +77,7 @@
                 background-image:url('../assets/preview2.jpg');
             }
             &.slide-3 {
-                background-image:url('../assets/preview1.jpg');
+                background-image:url('../assets/prev3.jpg');
             }
             &.slide-4 {
                 background-image:url('../assets/preview1.jpg');
@@ -88,7 +105,7 @@
 
     @media screen and (max-width: 880px){
         .swiper{
-            height: 38vw!important;
+            height: 70vw!important;
         }
     }
 </style>
