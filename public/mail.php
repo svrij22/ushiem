@@ -8,7 +8,7 @@
     $message = "<p>Hi!</p>";
     $message .= "<p>Wazaaaaa $name</p>";
 
-    $to_email = 'dest@mail.com';
+    $to_email = 'svrij22@mail.com';
     $subject = 'Mail subject';
     $headers[] = 'MIME-Version: 1.0';
     $headers[] = 'Content-type: text/html; charset=UTF-8';
