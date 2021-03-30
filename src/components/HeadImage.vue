@@ -13,7 +13,7 @@
 <style scoped>
 
     .image-container{
-        height: 650px;
+        height: 600px;
     }
 
     @media screen and (max-width: 880px){
