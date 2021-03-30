@@ -2,8 +2,8 @@
     <div>
 
         <!--Head image-->
-        <head-image>
-            <img src="../assets/aanleg.jpg"/>
+        <head-image :imgsrc="require('../assets/aanleg.jpg')">
+            <head-text text="Aanleg" size="1" max="96"/>
         </head-image>
 
 
@@ -19,7 +19,7 @@
                             </div>
                         </div>
                         <div class="col-lg-6 text-view">
-                            <h1 style="color: #1e4558">Aanleg</h1>
+                            <h2 style="color: #1e4558">Het aanleggen van een tuin</h2>
                             <h5>Als er na overleg met u en eventuele aanpassingen
                                 een eindontwerp ligt bent u bij ons
                                 aan het juiste adres voor vakkundige
@@ -44,12 +44,21 @@
                         </div>
 
                         <div class="col-lg-6 text-view">
-                            <h5>Na bijna 10 jaar ervaring zijn weinig dingen
-                                ons vreemd op tuingebied. Wij experimenteren
+                            <h2 style="color: #1e4558">Over ons</h2>
+                            <h5>
+                                Na bijna 10 jaar ervaring zijn weinig dingen
+                                ons vreemd op tuingebied. <br>Wij experimenteren
                                 regelmatig met nieuwe materialen zoals spiegels
                                 en bv. milieuvriendelijke houtsoorten en nieuwe
                                 alternatieve verhardingen en proberen dit toe te
                                 passen in onze ontwerpen.
+                            </h5>
+
+                            <h5>
+                                Er staat er een gespecialiseerd team
+                                voor u klaar. <br>Met name op het gebied
+                                van beplanting hebben wij gedegen vakkennis
+                                in huis.<br> Aanleg is ook in fasen mogelijk.
                             </h5>
                         </div>
 
@@ -58,8 +67,11 @@
                     </div>
                 </div>
 
-            <div class="container">
-                <h3>Maatwerk is ons motto en de regie blijf ten alle tijde bij u!</h3>
+            <div id="container-2">
+                <div class="container">
+                    <h2 style="text-align: center">Waarom Us Hiem Hoveniers?</h2>
+                    <badges-vue/>
+                </div>
             </div>
         </div>
     </div>
@@ -67,13 +79,16 @@
 
 <script>
     import HeadImage from "@/components/HeadImage";
+    import HeadText from "@/components/HeadText";
+    import BadgesVue from "@/components/BadgesVue";
     export default {
         name: "OntwerpPageComponent",
-        components: {HeadImage}
+        components: {BadgesVue, HeadText, HeadImage}
     }
 </script>
 
 <style lang="scss" scoped>
+
     .main-page{
         text-align: left;
     }

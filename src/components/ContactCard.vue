@@ -8,8 +8,8 @@
         <div class="card-content">
             <b-card-text style="text-align: left; font-size: 18px">
                 <b>Leen van der Sluijs</b><br>
-                Ringwei 8,<br>
-                9153 BK Brantgum,<br>
+                Ringwei 8<br>
+                9153 BK Brantgum<br>
             </b-card-text>
 
             <b-button href="tel:0620081280" variant="primary" size="lg" style="margin-bottom: 10px">06 2008 1280</b-button>

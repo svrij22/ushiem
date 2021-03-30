@@ -2,8 +2,8 @@
     <div>
 
         <!--Head image-->
-        <head-image>
-            <img src="../assets/drawn.jpg"/>
+        <head-image :imgsrc="require('../assets/drawn.jpg')">
+            <head-text text="Tuinontwerp" size="0.6" max="70"/>
         </head-image>
 
 
@@ -19,7 +19,7 @@
                             Uw woning verdient een mooie tuin.
                             Dit begint bij een vakkundig en doordacht
                             ontwerp dat past bij uw woning maar vooral
-                            bij u. Wij komen graag bij u langs voor een
+                            bij u. <br><br>Wij komen graag bij u langs voor een
                             oriënterend gesprek. Dit is kosteloos en
                             verplicht u tot niets . Hierin kunnen wij u
                             informeren over de mogelijkheden en onmogelijkheden
@@ -50,14 +50,15 @@
                         </div>
 
                         <div class="col-lg-6 text-view">
+                            <h2 style="color: #1e4558">Het proces</h2>
                             <h5>Hierna kunnen uw ideeën en wensen eventueel
                                 worden verwerkt in een uniek en creatief
-                                ontwerp voor úw tuin. Natuurlijk wordt
+                                ontwerp voor úw tuin. <br><br>Natuurlijk wordt
                                 ieder ontwerp begeleid door een
                                 vrijblijvende en gespecificeerde
                                 offerte wat betreft eventuele
                                 aanleg en materiaalkosten.
-                                Doordat de tekening digitaal
+                                <br><br>Doordat de tekening digitaal
                                 gemaakt word kan er nog naar hartelust
                                 geschoven en veranderd worden tot het
                                 ontwerp aan al uw wensen voldoet.
@@ -75,9 +76,10 @@
 
 <script>
     import HeadImage from "@/components/HeadImage";
+    import HeadText from "@/components/HeadText";
     export default {
         name: "OntwerpPageComponent",
-        components: {HeadImage}
+        components: {HeadText, HeadImage}
     }
 </script>
 

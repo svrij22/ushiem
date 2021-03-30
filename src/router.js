@@ -1,8 +1,8 @@
 import VueRouter from "vue-router";
-import MainPageComponent from "@/components/MainPageComponent";
-import OntwerpPageComponent from "@/components/OntwerpPageComponent";
-import AanlegPageComponent from "@/components/AanlegPageComponent";
-import ContactPageComponent from "@/components/ContactPageComponent";
+import MainPageComponent from "@/view/MainPageComponent";
+import OntwerpPageComponent from "@/view/OntwerpPageComponent";
+import AanlegPageComponent from "@/view/AanlegPageComponent";
+import ContactPageComponent from "@/view/ContactPageComponent";
 
 export default new VueRouter({
     routes:[
