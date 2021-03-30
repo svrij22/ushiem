@@ -25,6 +25,7 @@
                             <div class="form-group">
                                 <label>Voornaam *</label>
                                 <input id="form_name"
+                                       v-model="form.voornaam"
                                        type="text"
                                        name="name"
                                        class="form-control"
@@ -36,6 +37,7 @@
                                 <label>Achternaam *</label>
                                 <input id="form_lastname" type="text"
                                        name="surname"
+                                       v-model="form.achternaam"
                                        class="form-control"
                                        placeholder="Achternaam"
                                        required="required"
@@ -45,6 +47,7 @@
                             <div class="form-group">
                                 <label>Email *</label>
                                 <input id="form_email" type="email"
+                                       v-model="form.email"
                                        name="email"
                                        class="form-control"
                                        placeholder="adres@mail.com"
@@ -57,12 +60,13 @@
                                         <label>Uw plannen voor uw tuin</label>
 
                                         <textarea id="form_message"
-                                          name="message"
-                                          class="form-control"
-                                          placeholder=""
-                                          rows="4"
-                                          required="required"
-                                          data-error="Please, leave us a message."></textarea>
+                                                  name="message"
+                                                  v-model="form.message"
+                                                  class="form-control"
+                                                  placeholder=""
+                                                  rows="4"
+                                                  required="required"
+                                                  data-error="Please, leave us a message."></textarea>
                                     </div>
                                 </div>
                                 <input type="submit" class="ml-3 btn btn-success btn-send" value="Send message">
@@ -85,10 +89,15 @@
     export default {
         name: "ContactPageComponent",
         components: {ContactCard, HeadText, HeadImage},
+        data(){
+            return {
+                form: {}
+            }
+        },
         methods: {
             onSubmit(e) {
                 e.preventDefault();
-                axios.post("/mail.php", querystring.stringify(this.form))
+                axios.post("mail.php", querystring.stringify(this.form))
                     .then(res => {
                         this.sent = true;
                         console.log(res)

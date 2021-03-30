@@ -1,20 +1,15 @@
 <?php
-    $name = "Undefined name";
+    echo $_POST['voornaam'];
+    echo $_POST['achternaam'];
+    echo $_POST['email'];
+    echo $_POST['message'];
+    
+    $to      = 'svrij22@gmail.com';
+    $subject = 'the subject';
+    $message = 'hello';
+    $headers = 'From: ushiem@svrij.nl' . "\r\n" .
+        'Reply-To: ushiem@svrij.nl' . "\r\n" .
+        'X-Mailer: PHP/' . phpversion();
 
-    if(isset($_POST['name'])){
-        $name = $_POST['name'];
-    }
-
-    $message = "<p>Hi!</p>";
-    $message .= "<p>Wazaaaaa $name</p>";
-
-    $to_email = 'svrij22@mail.com';
-    $subject = 'Mail subject';
-    $headers[] = 'MIME-Version: 1.0';
-    $headers[] = 'Content-type: text/html; charset=UTF-8';
-    $headers[] = 'From: Biloo <noreply@ydomain.com>';
-
-    mail($to_email, $subject, $message, implode("\r\n", $headers));
-
-    echo "test";
+    mail($to, $subject, $message, $headers);
 ?>
