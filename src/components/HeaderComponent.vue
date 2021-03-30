@@ -62,7 +62,6 @@
 
     /*Top info line*/
     .d-block.top-info{
-        background-color: #444444;
         background-color: #313e33;
         display: flex!important;
         flex-direction: row;
@@ -94,6 +93,7 @@
 
     .navbar{
         background-color: white;
+        border-bottom: 1px solid white;
         transition: 0.3s;
 
         & img{

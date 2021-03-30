@@ -33,29 +33,39 @@
                         </div>
                     </div>
                 </div>
+                <div class="spacer"/>
             </div>
 
             <!--Second image-->
             <div id="container-2">
-                <div class="row container">
-                    <div class="col-lg-6">
-                        <div class="img-container">
-                            <img src="../assets/tek3.jpg">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="spacer"/>
+
+                        <div class="col-lg-6">
+                            <div class="img-container">
+                                <img src="../assets/tek3.jpg">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6 text-view">
-                        <h5>Hierna kunnen uw ideeën en wensen eventueel
-                            worden verwerkt in een uniek en creatief
-                            ontwerp voor úw tuin. Natuurlijk wordt
-                            ieder ontwerp begeleid door een
-                            vrijblijvende en gespecificeerde
-                            offerte wat betreft eventuele
-                            aanleg en materiaalkosten.
-                            Doordat de tekening digitaal
-                            gemaakt word kan er nog naar hartelust
-                            geschoven en veranderd worden tot het
-                            ontwerp aan al uw wensen voldoet.
-                        </h5>
+
+                        <div class="col-lg-6 text-view">
+                            <h5>Hierna kunnen uw ideeën en wensen eventueel
+                                worden verwerkt in een uniek en creatief
+                                ontwerp voor úw tuin. Natuurlijk wordt
+                                ieder ontwerp begeleid door een
+                                vrijblijvende en gespecificeerde
+                                offerte wat betreft eventuele
+                                aanleg en materiaalkosten.
+                                Doordat de tekening digitaal
+                                gemaakt word kan er nog naar hartelust
+                                geschoven en veranderd worden tot het
+                                ontwerp aan al uw wensen voldoet.
+                            </h5>
+                        </div>
+
+                        <div class="spacer"/>
+
                     </div>
                 </div>
             </div>
@@ -77,10 +87,9 @@
         text-align: left;
     }
 
-    .row{
-        padding: 20px;
-        padding-bottom: 25px;
-        padding-top: 25px;
+    .spacer{
+        width: 100%;
+        height: 2rem;
     }
 
     #container-2{
@@ -94,12 +103,23 @@
         line-height: 1.7rem;
     }
 
+    @media screen and (max-width: 900px){
+
+        /*Extra padding for text*/
+        .text-view{
+            margin-right: 20px;
+            margin-left: 20px;
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+    }
+
     .img-container{
         display: flex;
         justify-content: center;
         & img{
             width: 100%;
-            max-height: 300px;
+            max-height: 340px;
             object-fit: cover;
             max-width: 80vw;
             border-radius: 8px;

@@ -28,13 +28,6 @@ export default {
   font-family: 'Lato', sans-serif;
   min-height: 100%;
   position: relative;
-  padding-bottom: 450px;
-}
-
-@media screen and (max-width: 893px) {
-  #app {
-    padding-bottom: 700px;
-  }
 }
 
 html, body {
